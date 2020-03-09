@@ -27,4 +27,15 @@ function debug_shortlist() {
 
 
 
+//start the session, if not already running
+if(!session_id()) {
+    session_start();
+}
+         
+// define a fallback value for an shortlist session
+if(!isset($_SESSION['shortlist'])) {
+    $_SESSION['shortlist'] = array();
+}
+
+
 ?>
