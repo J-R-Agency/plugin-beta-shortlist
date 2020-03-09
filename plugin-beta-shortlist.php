@@ -14,4 +14,10 @@ function my_thank_you_text ( $content ) {
     return $content .= '<p>Thank you for reading!</p>';
 }
 
+
+add_action ( 'the_content', 'action_buttons' );
+
+function action_buttons ( $content ) {
+	return $content .= ' <a href="?add="' . get_the_ID() . '" title="Add to shortlist"> Add to shortlist </a> '; 
+}
 ?>
