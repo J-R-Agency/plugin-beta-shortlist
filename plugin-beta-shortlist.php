@@ -20,4 +20,13 @@ add_action ( 'the_content', 'action_buttons' );
 function action_buttons ( $content ) {
 	return $content .= ' <a href="?add="' . get_the_ID() . '" title="Add to shortlist"> Add to shortlist </a> '; 
 }
+
+if ( ! function_exists('custom_functions') ) {
+    function custom_functions() {
+    include(get_template_directory() . '/includes/shortlist-functions.php');
+    }
+}
+// runs before 'init' hook
+add_action( 'after_setup_theme', 'custom_functions' );
+
 ?>
