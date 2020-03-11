@@ -42,7 +42,7 @@ if ( ! empty( $title ) )
 echo $args['before_title'] . $title . $args['after_title'];
  
 // This is where you run the code and display the output
-echo __( 'Hello, World!', 'jr_widget_domain' );
+echo __( '', 'jr_widget_domain' );
 
 
 		// Get function (returns array of IDs): 
