@@ -3,7 +3,7 @@
 Plugin Name: Wellbeing Liverpool Shortlist (beta)
 Plugin URI: https://www.jnragency.co.uk/
 Description: Beta version of the shortlist plugin
-Version: 0.1
+Version: 0.3
 Author: GM
 Author URI: https://www.jnragency.co.uk/
 */
@@ -43,6 +43,19 @@ echo $args['before_title'] . $title . $args['after_title'];
  
 // This is where you run the code and display the output
 echo __( 'Hello, World!', 'jr_widget_domain' );
+
+
+		// Get function (returns array of IDs): 
+		print_r ( get_user_favorites($user_id, $site_id) );
+
+		// Get function (returns html list): 
+		print_r ( get_user_favorites_list($user_id, $site_id, $include_links, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ) ;
+
+		// Print function (prints an html list): 
+		the_user_favorites_list($user_id, $site_id, $include_links, $filters, $include_button, $include_thumbnails = false, $thumbnail_size = 'thumbnail', $include_excerpt = false) ;
+
+
+
 echo $args['after_widget'];
 }
          
