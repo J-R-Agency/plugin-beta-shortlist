@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Wellbeing Liverpool Shortlist (beta)
+Plugin Name: Action Plan Widgets for Wellbeing Liverpool (beta)
 Plugin URI: https://www.jnragency.co.uk/
 Description: Beta version of the shortlist plugin
 Version: 0.3
